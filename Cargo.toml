@@ -1,0 +1,30 @@
+[package]
+name = "leilao"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "leilao"
+path = "src/lib.rs"
+
+[[bin]]
+name = "servidor"
+path = "src/bin/servidor.rs"
+
+[[bin]]
+name = "cliente"
+path = "src/bin/cliente.rs"
+
+[dependencies]
+tonic = "0.11"
+prost = "0.12"
+tokio = { version = "1", features = ["full"] }
+tokio-stream = { version = "0.1", features = ["sync"] }
+getrandom = "=0.2.15"
+fastrand = "=2.0.2"
+tempfile = "=3.10.1"
+hashbrown = "=0.14.5"
+indexmap = "=2.2.6"
+
+[build-dependencies]
+tonic-build = "0.11"

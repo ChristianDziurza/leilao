@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package leilao;
+
+service Leilao {
+  rpc DarLance (LanceRequest) returns (LanceResponse);
+  rpc AcompanharLeilao (AcompanharRequest) returns (stream AtualizacaoLeilao);
+  rpc ObterHistorico (HistoricoRequest) returns (HistoricoResponse);
+}
+
+message LanceRequest {
+  string id_leilao = 1;
+  string participante = 2;
+  double valor = 3;
+}
+
+message LanceResponse {
+  bool aceito = 1;
+  string mensagem = 2;
+  double maior_lance_atual = 3;
+}
+
+message AcompanharRequest {
+  string id_leilao = 1;
+  string participante = 2;
+}
+
+message AtualizacaoLeilao {
+  string participante = 1;
+  double valor = 2;
+  string evento = 3;
+}
+
+message HistoricoRequest {
+  string id_leilao = 1;
+}
+
+message Lance {
+  string participante = 1;
+  double valor = 2;
+}
+
+message HistoricoResponse {
+  repeated Lance lances = 1;
+}

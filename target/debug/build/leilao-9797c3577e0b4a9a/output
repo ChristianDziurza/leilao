@@ -1,0 +1,2 @@
+cargo:rerun-if-changed=proto/leilao.proto
+cargo:rerun-if-changed=proto

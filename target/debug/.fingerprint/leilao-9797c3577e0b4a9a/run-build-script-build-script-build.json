@@ -1,0 +1,1 @@
+{"rustc":15335473461698482004,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[15396777905163050641,"build_script_build",false,3898305862679204615]],"local":[{"RerunIfChanged":{"output":"debug\\build\\leilao-9797c3577e0b4a9a\\output","paths":["proto/leilao.proto","proto"]}}],"rustflags":[],"config":0,"compile_kind":0}
